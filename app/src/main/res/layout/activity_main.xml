@@ -125,7 +125,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:hint="@string/preco_kwh"
-        android:inputType="number"
+        android:inputType="numberDecimal"
         android:maxLength="10"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -137,7 +137,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:hint="@string/km_percorrido"
-        android:inputType="number"
+        android:inputType="numberDecimal"
         android:maxLength="20"
         app:layout_constraintEnd_toEndOf="@id/et_preco_kwh"
         app:layout_constraintStart_toStartOf="@id/et_preco_kwh"
@@ -145,12 +145,22 @@
 
     <Button
         android:id="@+id/btn_calcular"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="4dp"
         android:text="@string/calcular"
+        app:layout_constraintEnd_toEndOf="@+id/et_km_percorrido"
+        app:layout_constraintStart_toStartOf="@+id/et_km_percorrido"
         app:layout_constraintTop_toBottomOf="@+id/et_km_percorrido" />
 
 
+    <TextView
+        android:id="@+id/tv_resultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/btn_calcular"
+        app:layout_constraintTop_toBottomOf="@id/btn_calcular" />
 </androidx.constraintlayout.widget.ConstraintLayout>
