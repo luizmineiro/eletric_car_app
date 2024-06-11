@@ -8,11 +8,12 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ListView
 import android.widget.TextView
+import androidx.recyclerview.widget.RecyclerView
 import com.example.eletriccarapp.R
 
 class MainActivity : AppCompatActivity() {
     lateinit var btnCalcular : Button;
-    lateinit var lista : ListView;
+    lateinit var listaCarros : RecyclerView;
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,15 +24,15 @@ class MainActivity : AppCompatActivity() {
     }
     fun setupViews(){
         btnCalcular = findViewById(R.id.btn_calcular);
-        lista = findViewById(R.id.lv_infos);
+        listaCarros = findViewById(R.id.rv_lista_carros);
     }
 
     fun setupLista(){
         var dados = arrayOf(
             "Tiramisu", "Snow Cone", "Red Velvet Cake", "Quince Tar", "Pistachio Ice Cream", "Oreo", "Nougat", "Marshmallow", "Lollipop", "KitKat",
         )
-        var adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, dados)
-        lista.adapter = adapter
+        //var adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, dados)
+        //listaCarros.adapter = adapter
     }
 
     fun setupListeners(){
